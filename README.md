@@ -21,7 +21,7 @@
 
 ### **Tier 3:** 
 
-      ALPHA:    10 ALPHA tokens (Super fast speed - no delay between each price check. All features unlocked and priority support in the Alpha DAO [Telegram](t.me/alphadao1337).
+      ALPHA:    10 ALPHA tokens (Super fast speed - no delay between each price check. All features unlocked and priority support in the Alpha DAO Telegram. https://t.me/alphadao1337
 
 
 
