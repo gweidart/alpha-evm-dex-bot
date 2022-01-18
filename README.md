@@ -1,6 +1,10 @@
 # Alpha KCC Dex Bot
 
+<center><a href="https://ibb.co/XFXq7RT"><img src="https://i.ibb.co/XFXq7RT/bot-icon-1.png" alt="bot-icon-1" border="0"></a></center>
+
+
 - AlphaBot is an automated trading bot for the KCC DeFi ecosystem, however it is compatible with several other EVM chains. 
+
 - AlphaBot has the ability to scan multiple trading pairs on a Dex, grab the price in realtime and make automated trading decisions based on user settings.
 
 **To use AlphaBot you must hold [ALPHA](https://alphadao.money) tokens (KCC) in your bot wallet.**
@@ -56,12 +60,18 @@
 
 ___
 
-<a href="https://ibb.co/nzRWcYS"><img src="https://i.ibb.co/Rz750sW/tempsnip.png" alt="tempsnip" border="0"></a>
+
+![image](https://i.ibb.co/6g7GpLn/Capture.png)
 
 
 ## Installation
 
 You will need to have the latest version of [Pyhon](https://www.python.org/downloads/) & [Visual Studio](https://visualstudio.microsoft.com/fr/thank-you-downloading-visual-studio/?sku=Community&rel=17) installed.
+
+
+### Update!! 1/18/22: You now have the option to simply run the precompiled .exe from inside the AlphaBot folder! 
+
+If you would still like to run the bot from source please follow the instructions below 👇 
 
 Clone this repo:
 
