@@ -1,13 +1,25 @@
-[{
-	"ALPHAWALLETPRIVATEKEY": "705f0ed67829a7ed3017ec0fc01652c6ea7b31bd9cf1b89c2f5d2f350362e290",
-	"ALPHAWALLETADDRESS": "0x1337Da0B6699C091EDF992E44f6016de155DB25b",
-	"WALLETADDRESS": "0x1337Da0B6699C091EDF992E44f6016de155DB25b",
-	"PRIVATEKEY": "705f0ed67829a7ed3017ec0fc01652c6ea7b31bd9cf1b89c2f5d2f350362e290",
-	"USECUSTOMNODE": "false",
-	"CUSTOMNODE": "put your own node here",
-	"EXCHANGE": "kuswap",
-	"EXCHANGEVERSION": "2",
-	"PREAPPROVE": "true",
-	"UNLIMITEDSLIPPAGE": "false",
-	"ENCRYPTPRIVATEKEYS": "false"
-}]
+[
+	{
+		"ALPHAWALLETPRIVATEKEY": "do not enter it manually, open the bot : it will encrypt it",
+		"ALPHAWALLETADDRESS": "wallet address where you hold your ALPHA tokens",
+		"WALLETADDRESS": "wallet address you want to trade on : can be different from ALPHA wallet",
+		"PRIVATEKEY": "do not enter it manually, open the bot : it will encrypt it",
+		"WALLETADDRESS2": "null",
+		"PRIVATEKEY2": "null",
+		"WALLETADDRESS3": "null",
+		"PRIVATEKEY3": "null",
+		"WALLETADDRESS4": "null",
+		"PRIVATEKEY4": "null",
+		"WALLETADDRESS5": "null",
+		"PRIVATEKEY5": "null",
+		"USECUSTOMNODE": "false",
+		"CUSTOMNODE": "put your own node here",
+		"EXCHANGE": "kuswap",
+		"EXCHANGEVERSION": "2",
+		"PREAPPROVE": "true",
+		"UNLIMITEDSLIPPAGE": "false",
+		"PASSWORD_ON_CHANGE": "false",
+		"VERBOSE_PRICING": "false",
+		"SLOW_MODE": "false"
+	}
+]
