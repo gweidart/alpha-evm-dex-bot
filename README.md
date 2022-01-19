@@ -29,7 +29,7 @@
 ### **Tier 2: FROG KING** 
 
      5 ALPHA tokens (Medium speed - 3s between each price check.
-	 No mempool monitoring)
+          mempool monitoring enabled)
 
 ### **Tier 3: ALPHA** 
 
@@ -39,11 +39,14 @@
 
 ### Features
 - Dex Limit Orders
-- Dex Stop Loss.
+- Dex Stop Loss
+- Dex trailing stop loss
 - Mempool Sniping (AlphaBot is fast enough to snipe liquidity in the same block)
 - Accumulation Mode
 - Take profit
 - trailing take profit
+- multi pair / multi wallet trading
+- multi pair monitoring 
 - Grid trading
 - Automated Rug Doc
 - Front run
@@ -91,13 +94,13 @@ git clone https://github.com/cusdt-LINK/alpha-kcc-dex-bot
 **Install requirements:**
 
 ```
-pip install -r requirements.txt`  
+pip install -r requirements.txt 
 this will install all the packages needed to run AlphaBot.
 ```
 
 **Open Windows Powershell** (or Bash / Terminal on Linux / MacOs)
 
-Navigate to the AlphaBot folder:**
+**Navigate to the AlphaBot folder:**
 
 ```
 cd path\to\alphabot\folder 
@@ -137,7 +140,7 @@ python alphabot.py
 		"PREAPPROVE": "true",
 		"UNLIMITEDSLIPPAGE": "false",
 		"PASSWORD_ON_CHANGE": "false",
-		"VERBOSE_PRICING": "false",
+		"VERBOSE_PRICING": "true",
 		"SLOW_MODE": "false"
 	}
 ]
@@ -146,11 +149,11 @@ python alphabot.py
 
 ##### EXCHANGEVERSION:
 ```
-Only applies to Pancake Swap. Otherwise just leave it alone. 
+Only applies to PancakeSwap. Otherwise just leave it alone. 
 ```
 ##### ALPHAWALLETPRIVATEKEY / PRIVATEKEY:
 ```
-Private key of the wallet holding you ALPHA tokens. & Private key of the wallet the bot will trade to / from. 
+Private key of the wallet holding your ALPHA tokens. & Private key of the wallet the bot will trade to / from. 
 	( not the 12 words seed phrase)
 ```
 ##### USECUSTOMNODE:
@@ -183,14 +186,13 @@ Activate this option if you want the bot to ask your private key's password agai
 ##### VERBOSE_PRICING:
 ```
 Self explanatory. 
-Default setting is "true". If you set this to "false", the bot will only show lines on the screen if the price.
+Default setting is "true". If you set this to "false", the bot will only show lines on the screen when the price updates.
 ```
 ##### SLOW_MODE:
 ```
 Changes how often the bot queries for price. If "true" the bot will check every 0.5s.
 (If you are using a public node provider, consider using SLOW-MODE if you are getting rate limited).
 ```
-[========]
 
 #### tokens.json
 
@@ -204,24 +206,24 @@ Changes how often the bot queries for price. If "true" the bot will check every 
     "ADDRESS": "0x0490c1076552ed3c91876ead9f6a547b389e69d4",
     
     "KIND_OF_SWAP": "tokens",
-    "BUYAMOUNTINBASE": "0.000005",
+    "BUYAMOUNTINBASE": "0.5",
     "BUYAMOUNTINTOKEN": "10",
-    "MAX_BASE_AMOUNT_PER_EXACT_TOKENS_TRANSACTION": "0.1",
+    "MAX_BASE_AMOUNT_PER_EXACT_TOKENS_TRANSACTION": "0.5",
 
     "BUYPRICEINBASE":  "10",
     "SELLPRICEINBASE": "15",
     "STOPLOSSPRICEINBASE": "8",
-    "SLIPPAGE": "5",
+    "SLIPPAGE": "25",
 
-    "MAXTOKENS": "0.1",
+    "MAXTOKENS": "100",
     "MOONBAG": "0",
 
-    "RUGDOC_CHECK": "true",
+    "RUGDOC_CHECK": "false",
     "BUYAFTER_XXX_SECONDS": "0",
-    "WAIT_FOR_OPEN_TRADE": "true",
+    "WAIT_FOR_OPEN_TRADE": "false",
 
     "MAX_FAILED_TRANSACTIONS_IN_A_ROW": "2",    
-    "MAX_SUCCESS_TRANSACTIONS_IN_A_ROW": "2",    
+    "MAX_SUCCESS_TRANSACTIONS_IN_A_ROW": "null",    
     "MULTIPLEBUYS": "false",
     "BUYCOUNT": "1",
     "ALWAYS_CHECK_BALANCE": "false",
@@ -235,8 +237,8 @@ Changes how often the bot queries for price. If "true" the bot will check every 
 
     "SELLAMOUNTINTOKENS": "ALL",
     "HASFEES": "false",
-    "GAS": "7",
-    "BOOSTPERCENT": "30",
+    "GAS": "BOOST",
+    "BOOSTPERCENT": "1",
     "GASLIMIT": "1000000",
     "GASPRIORITY_FOR_ETH_ONLY": "1.5"
     
@@ -317,7 +319,7 @@ Must be TRUE or FALSE
 
 "false" : the bot uses native token (KCS / ETH / MATIC / BNB / FTM / MATIC)  to trade.
  	You only need to hold this native token
-"true" : bot uses the BASE pair you've entered below
+"true" : bot uses the BASE pair you've entered.
 
 	Please note: 
 		By using this option, the bot needs to route your transaction through several routes 
@@ -327,7 +329,7 @@ Must be TRUE or FALSE
 ##### BASESYMBOL:
 ```
 Symbol of the token you want to trade with if you selected USECUSTOMBASEPAIR = True
-(in this example : I want to buy KPAD with the WBNB I have in my wallet)
+(in this example : I want to buy ALPHA with the KCS I have in my wallet)
 ```
 ##### BASEADDRESS:
 ```
