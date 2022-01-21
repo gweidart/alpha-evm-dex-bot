@@ -23,11 +23,11 @@
 
 ### **Tier 1: BETA** 
      
-      1 ALPHA token (Slow speed - 6s between each price check. No mempool monitoring)
+      1 ALPHA token (Slow speed - 6s between each price check.)
 
 ### **Tier 2: FROG KING** 
 
-     5 ALPHA tokens (Medium speed - 3s between each price check. Mempool monitoring enabled)
+     5 ALPHA tokens (Medium speed - 3s between each price check.)
 
 ### **Tier 3: ALPHA** 
 
