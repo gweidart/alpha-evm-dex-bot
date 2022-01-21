@@ -23,18 +23,15 @@
 
 ### **Tier 1: BETA** 
      
-      1 ALPHA token (Slow speed - 6s between each price check. 
-	  No mempool monitoring)
+      1 ALPHA token (Slow speed - 6s between each price check. No mempool monitoring)
 
 ### **Tier 2: FROG KING** 
 
-     5 ALPHA tokens (Medium speed - 3s between each price check.
-          mempool monitoring enabled)
+     5 ALPHA tokens (Medium speed - 3s between each price check. Mempool monitoring enabled)
 
 ### **Tier 3: ALPHA** 
 
-     10 ALPHA tokens (Super fast speed - no delay between each price check.
-	 All features unlocked and priority support.)
+     10 ALPHA tokens (Super fast speed - no delay between each price check. All features unlocked and priority support.)
 
 
 ### Features
@@ -116,7 +113,7 @@ python alphabot.py
 
 ## Configuration
 
-####settings.json
+#### settings.json
 
 ```
 [
