@@ -11,7 +11,7 @@
 
 - AlphaBot uses web3.py and a custom wrapper to DIRECTLY interact with the smart contracts of the exchange. Thus avoiding slow web interfaces and Metamask, enabling AlphaBot to have the fastest throughput possible.  
 
-- All of this is done LOCALLY on you machine. AlphatBot NEVER has access to read or store your private keys. 
+- All of this is done LOCALLY on your machine. AlphatBot NEVER has access to read or store your private keys. 
 
 - Private keys are encrypted with a password during initial bot setup.
 
