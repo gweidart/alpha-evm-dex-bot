@@ -17,7 +17,7 @@
 
 #### **To use AlphaBot you must hold [ALPHA](https://alphadao.money) tokens (KCC) in your bot wallet.**
 
-##### [**Buy ALPHA on KuSwap**](https://kuswap.finance/#/swap?outputCurrency=0x0490c1076552ed3c91876ead9f6a547b389e69d4)
+##### [**Buy ALPHA on AlphaSwap**](https://swap.alphadao.money/#/swap?outputCurrency=0x0490c1076552ed3c91876ead9f6a547b389e69d4)
 
 ### There are 3 subscription levels:
 
