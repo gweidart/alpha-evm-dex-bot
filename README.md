@@ -23,15 +23,15 @@
 
 ### **Tier 1: BETA** 
      
-      1 ALPHA token (Slow speed - 6s between each price check.)
+      45 ALPHA tokens (Slow speed - 6s between each price check.)
 
 ### **Tier 2: FROG KING** 
 
-     5 ALPHA tokens (Medium speed - 3s between each price check.)
+     69 ALPHA tokens (Medium speed - 3s between each price check.)
 
 ### **Tier 3: ALPHA** 
 
-     10 ALPHA tokens (Super fast speed - no delay between each price check. All features unlocked and priority support.)
+     90 ALPHA tokens (Super fast speed - no delay between each price check. All features unlocked and priority support.)
 
 
 ### Features
