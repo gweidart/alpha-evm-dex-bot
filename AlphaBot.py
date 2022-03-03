@@ -1533,7 +1533,7 @@ elif settings["EXCHANGE"] == 'kuswap':
     settings['_STABLE_BASES'] = {'USD ':{ 'address': '0x0039f574ee5cc39bdd162e9a88e3eb1f111baf48', 'multiplier' : 0}}
 
 
-elif settings["EXCHANGE"] == 'koffeeswap':
+elif settings["EXCHANGE"] == 'alphaswap':
     if settings['USECUSTOMNODE'] == 'true':
         my_provider = settings['CUSTOMNODE']
     else:
@@ -1554,9 +1554,9 @@ elif settings["EXCHANGE"] == 'koffeeswap':
         client = Web3(Web3.IPCProvider(my_provider))
 
     print(timestamp(), "KuCoin Chain Connected =", client.isConnected())
-    print(timestamp(), "Loading KoffeeSwap Smart Contracts...")
-    routerAddress = Web3.toChecksumAddress("0xc0fFee0000C824D24E0F280f1e4D21152625742b")
-    factoryAddress = Web3.toChecksumAddress("0xC0fFeE00000e1439651C6aD025ea2A71ED7F3Eab")
+    print(timestamp(), "Loading AlphaSwap Smart Contracts...")
+    routerAddress = Web3.toChecksumAddress("0x6074761Ae58B88aC6b12396A290164e0e20b46Fe")
+    factoryAddress = Web3.toChecksumAddress("0x87383F77AddEB3cEaD7A78009AfcCF53C9F5bfCf")
     routerContract = client.eth.contract(address=routerAddress, abi=koffeeAbi)
     factoryContract = client.eth.contract(address=factoryAddress, abi=factoryAbi)
     weth = Web3.toChecksumAddress("0x4446Fc4eb47f2f6586f9fAAb68B3498F86C07521")
@@ -1881,19 +1881,19 @@ def parse_wallet_settings(settings, pwd):
     
     settings_changed = False
     
-    # Check for limit wallet information
+    # Check for alpha wallet information
     if " " in settings['ALPHAWALLETADDRESS'] or settings['ALPHAWALLETADDRESS'] == "":
         settings_changed = True
         settings['ALPHAWALLETADDRESS'] = input("Please provide the wallet address where you have your ALPHA: ")
     
-    # Check for limit wallet private key
+    # Check for alpha wallet private key
     if " " in settings['ALPHAWALLETPRIVATEKEY'] or settings['ALPHAWALLETPRIVATEKEY'] == "":
         settings_changed = True
         settings['ALPHAWALLETPRIVATEKEY'] = input("Please provide the private key for the wallet where you have your ALPHA: ")
     
-    # If the limit wallet private key is already set and encrypted, decrypt it
+    # If the alpha wallet private key is already set and encrypted, decrypt it
     elif settings['ALPHAWALLETPRIVATEKEY'].startswith('aes:'):
-        printt("Decrypting limit wallet private key.")
+        printt("Decrypting ALPHA wallet private key.")
         settings['ALPHAWALLETPRIVATEKEY'] = settings['ALPHAWALLETPRIVATEKEY'].replace('aes:', "", 1)
         settings['ALPHAWALLETPRIVATEKEY'] = cryptocode.decrypt(settings['ALPHAWALLETPRIVATEKEY'], pwd)
         
@@ -5087,7 +5087,7 @@ try:
     # The ALPHA balance of the user.
     true_balance = auth()
     
-    if true_balance >= 10:
+    if true_balance >= 90:
         print(timestamp(), "ALPHA Subscriptions Active")
         if command_line_args.slow_mode or settings['SLOW_MODE'] == 'true':
             printt_info("RUNNING IN SLOW MODE = price check every 0.5s")
@@ -5096,16 +5096,16 @@ try:
             cooldown = 0.01
         runLoop()
     
-    elif true_balance >= 5 and true_balance < 10:
+    elif true_balance >= 69 and true_balance < 90:
         print(timestamp(), "KING FROG Subscriptions Active")
         cooldown = 3
         runLoop()
-    elif true_balance >= 1 and true_balance < 5:
+    elif true_balance >= 45 and true_balance < 69:
         print(timestamp(), "BETA Subscriptions Active")
         cooldown = 6
         runLoop()
     else:
-        printt_err("1 - 10 ALPHA tokens needed to use this bot, please visit alphadao.money for more info, or buy more tokens on KuSwap to use!")
+        printt_err("45 - 90 ALPHA tokens needed to use this bot, please visit alphadao.money for more info, or buy more tokens on KuSwap to use!")
         sleep(10)
         sys.exit()
 
