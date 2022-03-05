@@ -23,7 +23,7 @@
 
 ### **Tier 1: BETA** 
      
-      45 ALPHA tokens (Slow speed - 6s between each price check.)
+      46 ALPHA tokens (Slow speed - 6s between each price check.)
 
 ### **Tier 2: FROG KING** 
 
@@ -98,7 +98,13 @@ pip install -r requirements.txt
 this will install all the packages needed to run AlphaBot.
 ```
 
-**Open Windows Powershell** (or Bash / Terminal on Linux / MacOs)
+### **Enable ANSI colors in terminal:**
+```
+run the "EnableTerminalColors.bat" --> I highly suggest doing this. It makes reading the bot ui 10x easier. Certain bot actions are color coded.
+
+```
+
+**Open Windows Command Prompt or Powershell** (or Bash / Terminal on Linux / MacOs)
 
 **Navigate to the AlphaBot folder:**
 
@@ -487,3 +493,5 @@ settings.json :
 "ENABLE_APPRISE_NOTIFICATIONS": "true",
 "APPRISE_PARAMETERS": ["windows://", "psafers://eFhoOW0gh0vwvOCqDPlB"] // eFhoOW0gh0vwvOCqDPlB is your PushSafer key
 ```
+
+Please note: Apprise notifications are **only enabled if you run the bot from source**. The precompiled .exe has apprise notifications disabled due to a bootloader compatibility issue. A fix for this will be released shortly : )
