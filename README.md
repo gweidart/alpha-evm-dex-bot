@@ -38,7 +38,9 @@
 - Dex Limit Orders
 - Dex Stop Loss
 - Dex trailing stop loss
+- real time trade notifications via Apprise. See below for more info!
 - Mempool Sniping (AlphaBot is fast enough to snipe liquidity in the same block)
+- Pink Sale Sniping 
 - Accumulation Mode
 - Take profit
 - trailing take profit
@@ -56,8 +58,8 @@
 
 ## Supported Dex:
 
-- **KuSwap**
-- **Koffee Swap**
+- **AlphaSwap**
+- **Kuswap**
 - PanCake Swap
 - Pink Swap
 - Bakery Swap
@@ -69,6 +71,7 @@
 - Spirit Swap
 - Quick Swap
 - UniSwap
+- Various other Dexs on Harmony, Chronos, Metis 
 
 ## Fees:
 AlphaBot does **NOT** and will **NEVER** charge its users trading fees. 
@@ -378,9 +381,13 @@ Ask the bot to wait for XXX seconds before placing a BUY order.
 This option is for tokens where liquidity is added, but the dev team enables trading with a special function.
 	("EnableTrading")
 
-Two scenerios:
+Several scenerios:
 	 "WAIT_FOR_OPEN_TRADE": "true" --> the bot will scan pending transactions and wait for the price to move simultainiously.
 	 "WAIT_FOR_OPEN_TRADE": "mempool" --> the bot will only scan pending transactions.
+	 "WAIT_FOR_OPEN_TRADE": "true_after_buy_tx_failed" --> same as "true", but the bot will try to place BUY orders as soon as it detects liquidity, and launch wait_for_open_trade if txn fails.
+	 "WAIT_FOR_OPEN_TRADE": "mempool_after_buy_tx_failed" --> same as "mempool", but the bot will try to place BUY orders as soon as it detects liquidity, and launch wait_for_open_trade if the txn fails.
+	 "WAIT_FOR_OPEN_TRADE": "pinksale" --> PinkSale Sniping!
+
 
 To make "WAIT_FOR_OPEN_TRADE": "true"  work, you need to snipe on the same liquidity pair that is being added.
 
@@ -446,4 +453,37 @@ This is for ETH only : sets Max Priority Gas.
 ```
 Use this option if you want the bot to set the minimal amount of liquidity you require in the Liquidity Pool before an order is placed. 
 	(Please note liquidity amount is set in $).
+```
+##### PINKSALE_PRESALE_ADDRESS:
+```
+enter the PRESALE ADDRESS (not the token address) :
+
+Please note: if you are sniping on PinkSale you must set:
+
+	WAIT_FOR_OPEN_TRADE: "pinksale",
+```
+
+#### What is Apprise ?
+
+It's an API that allows you to receive Push notifications via SMS / iMessage / in-browser / Telegram / Discord / ... basically everywhere!
+
+--> you can now receive real-time notifications when Alpha Bot executes a trade!! <--
+
+How to use it
+1). Check out the Apprise Github. Read their documentation! : https://github.com/caronc/apprise#popular-notification-services
+2). Configure your settings.json :
+```
+"ENABLE_APPRISE_NOTIFICATIONS": "true",
+"APPRISE_PARAMETERS": [put your parameters here : you can put several notifications at the same time]
+```
+
+Example:
+
+you are using a Windows computer and would like to receive notifications to your desktop
+register with [PushSafer](https://www.pushsafer.com/) --> copy and paste your PushSafer key into settings.json & set "ENABLE_APPRISE_NOTIFICATIONS" to "true".
+-->
+```
+settings.json :
+"ENABLE_APPRISE_NOTIFICATIONS": "true",
+"APPRISE_PARAMETERS": ["windows://", "psafers://eFhoOW0gh0vwvOCqDPlB"] // eFhoOW0gh0vwvOCqDPlB is your PushSafer key
 ```
