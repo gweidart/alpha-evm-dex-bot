@@ -3733,7 +3733,7 @@ def make_the_buy_exact_tokens(token_dict, inToken, outToken, buynumber, pwd, gas
                 
                 if settings["EXCHANGE"].lower() == 'alphaswap':
                     printt_debug("make_the_buy_exact_tokens condition 1", write_to_log=True)
-                    transaction = routerContract.functions.swapKCSForExactTokens(
+                    transaction = routerContract.functions.swapETHForExactTokens(
                         amount,
                         [weth, outToken],
                         Web3.toChecksumAddress(walletused),
