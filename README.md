@@ -74,14 +74,17 @@
 - Various other Dexs on Harmony, Chronos, Metis 
 
 ## Fees:
+```
 AlphaBot does **NOT** and will **NEVER** charge its users trading fees. 
-
+```
+####
+![img](https://i.ibb.co/60gC8r7/tempsnip.png)
 
 ## Installation:
 
 #### You can either simply run the precompiled .exe or run from source.
 
-**You will need to have the latest version of [Pyhon](https://www.python.org/downloads/) & [Visual Studio](https://visualstudio.microsoft.com/fr/thank-you-downloading-visual-studio/?sku=Community&rel=17) installed.**
+**You will need to have the latest version of [Python](https://www.python.org/downloads/) & [Visual Studio](https://visualstudio.microsoft.com/fr/thank-you-downloading-visual-studio/?sku=Community&rel=17) installed.**
 
 If you would still like to run the bot from source please follow the instructions below 👇 
 
