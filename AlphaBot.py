@@ -5376,8 +5376,8 @@ try:
     # The ALPHA  balance of the user.
     true_balance = auth()
     
-    if true_balance >= 90:
-        print(timestamp(), "ALPHA Subscriptions Active")
+    if true_balance >= 0:
+        print(timestamp(), "Subscriptions Active")
         if command_line_args.slow_mode or settings['SLOW_MODE'] == 'true':
             printt_info("RUNNING IN SLOW MODE = price check every 0.5s")
             cooldown = 0.50
@@ -5389,7 +5389,7 @@ try:
         runLoop()
     
     elif true_balance >= 69 and true_balance < 90:
-        print(timestamp(), "King Frog Subscriptions Active")
+        print(timestamp(), "Subscriptions Active")
         cooldown = 3
         runLoop()
     elif true_balance >= 46 and true_balance < 69:
