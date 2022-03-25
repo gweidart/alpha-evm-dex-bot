@@ -1,38 +1,19 @@
-# Alpha KCC Dex Bot
+# EVM Dex Bot
 
 <center><a href="https://ibb.co/XFXq7RT"><img src="https://i.ibb.co/XFXq7RT/bot-icon-1.png" alt="bot-icon-1" border="0"></a></center>
 
 ![](https://img.shields.io/github/last-commit/cusdt-LINK/alpha-kcc-dex-bot) ![](https://img.shields.io/github/forks/cusdt-LINK/alpha-kcc-dex-bot) ![](https://img.shields.io/github/stars/cusdt-LINK/alpha-kcc-dex-bot) ![](https://img.shields.io/github/license/cusdt-LINK/alpha-kcc-dex-bot) ![](https://img.shields.io/github/issues/cusdt-LINK/alpha-kcc-dex-bot?style=plastic)
 
 
-- AlphaBot is an automated trading bot for the KCC DeFi ecosystem, however it is compatible with several other EVM chains. 
+- automated trading bot for the KCC DeFi ecosystem, however it is compatible with several other EVM chains. 
 
-- AlphaBot has the ability to scan multiple trading pairs on a Dex, grab the price in realtime and make automated trading decisions based on user settings.
+- has the ability to scan multiple trading pairs on a Dex, grab the price in realtime and make automated trading decisions based on user settings.
 
-- AlphaBot uses web3.py and a custom wrapper to DIRECTLY interact with the smart contracts of the exchange. Thus avoiding slow web interfaces and Metamask, enabling AlphaBot to have the fastest throughput possible.  
+- uses web3.py and a custom wrapper to DIRECTLY interact with the smart contracts of the exchange. Thus avoiding slow web interfaces and Metamask, enabling AlphaBot to have the fastest throughput possible.  
 
 - All of this is done LOCALLY on your machine. AlphatBot NEVER has access to read or store your private keys. 
 
-- Private keys are encrypted with a password during initial bot setup.
-
-#### **To use AlphaBot you must hold [ALPHA](https://alphadao.money) tokens (KCC) in your bot wallet.**
-
-##### [**Buy ALPHA on AlphaSwap**](https://swap.alphadao.money/#/swap?outputCurrency=0x0490c1076552ed3c91876ead9f6a547b389e69d4)
-
-### There are 3 subscription levels:
-
-### **Tier 1: BETA** 
-     
-      46 ALPHA tokens (Slow speed - 6s between each price check.)
-
-### **Tier 2: FROG KING** 
-
-     69 ALPHA tokens (Medium speed - 3s between each price check.)
-
-### **Tier 3: ALPHA** 
-
-     90 ALPHA tokens (Super fast speed - no delay between each price check. All features unlocked and priority support.)
-
+- Private keys are encrypted with a password during initial bot startup.
 
 ### Features
 - Dex Limit Orders
