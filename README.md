@@ -2,7 +2,7 @@
 
 <center><a href="https://ibb.co/XFXq7RT"><img src="https://i.ibb.co/XFXq7RT/bot-icon-1.png" alt="bot-icon-1" border="0"></a></center>
 
-![](https://img.shields.io/github/last-commit/cusdt-LINK/alpha-kcc-dex-bot) ![](https://img.shields.io/github/forks/cusdt-LINK/alpha-kcc-dex-bot) ![](https://img.shields.io/github/stars/cusdt-LINK/alpha-kcc-dex-bot) ![](https://img.shields.io/github/license/cusdt-LINK/alpha-kcc-dex-bot) ![](https://img.shields.io/github/issues/cusdt-LINK/alpha-kcc-dex-bot?style=plastic)
+![](https://img.shields.io/github/last-commit/cusdt-LINK/alpha-evm-dex-bot) ![](https://img.shields.io/github/forks/cusdt-LINK/alpha-evm-dex-bot) ![](https://img.shields.io/github/stars/cusdt-LINK/alpha-evm-dex-bot) ![](https://img.shields.io/github/license/cusdt-LINK/alpha-evm-dex-bot) ![](https://img.shields.io/github/issues/cusdt-LINK/alpha-evm-dex-bot?style=plastic)
 
 
 - automated trading bot for the KCC DeFi ecosystem, however it is compatible with several other EVM chains. 
