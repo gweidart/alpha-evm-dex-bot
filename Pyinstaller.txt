@@ -1,3 +1,0 @@
-pyinstaller AlphaBot.py
-
-
